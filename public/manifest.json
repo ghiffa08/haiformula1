@@ -3,12 +3,12 @@
   "name": "haiFormula1 Live Tracker",
   "icons": [
     {
-      "src": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=192&q=80",
+      "src": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=192&h=192&fit=crop",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=512&q=80",
+      "src": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=512&h=512&fit=crop",
       "type": "image/png",
       "sizes": "512x512"
     }

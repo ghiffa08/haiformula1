@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_widget_background"
+    android:padding="16dp">
+
+    <!-- Sesi Terdekat Label -->
+    <LinearLayout
+        android:id="@+id/session_label_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_widget_badge"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:src="@android:color/transparent"
+            android:background="#FF2744"
+            android:layout_marginEnd="6dp" />
+
+        <TextView
+            android:id="@+id/widget_session_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SESI TERDEKAT"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textAllCaps="true" />
+    </LinearLayout>
+
+    <!-- Circuit Location -->
+    <TextView
+        android:id="@+id/widget_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/session_label_container"
+        android:text="LOKASI"
+        android:textColor="#88FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textAllCaps="true" />
+
+    <!-- Race Name -->
+    <TextView
+        android:id="@+id/widget_race_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/session_label_container"
+        android:layout_marginTop="12dp"
+        android:text="F1 GRAND PRIX"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="true" />
+
+    <!-- Circuit Image -->
+    <ImageView
+        android:id="@+id/widget_circuit_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:tint="#FFFFFF"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Static Info Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#33000000"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/widget_countdown_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JADWAL:"
+            android:textColor="#66FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:id="@+id/widget_race_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sabtu, 24 Jun - 15:00"
+            android:textColor="#FF2744"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+            
+    </LinearLayout>
+
+</RelativeLayout>

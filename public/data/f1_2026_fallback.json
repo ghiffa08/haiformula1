@@ -1,0 +1,130 @@
+{
+  "races": [
+    {
+      "round": "1",
+      "raceName": "Bahrain Grand Prix",
+      "date": "2026-03-07",
+      "time": "15:00:00Z",
+      "Circuit": {
+        "circuitName": "Bahrain International Circuit",
+        "Location": { "locality": "Sakhir", "country": "Bahrain" }
+      },
+      "FirstPractice": { "date": "2026-03-05", "time": "11:30:00Z" },
+      "SecondPractice": { "date": "2026-03-05", "time": "15:00:00Z" },
+      "ThirdPractice": { "date": "2026-03-06", "time": "12:30:00Z" },
+      "Qualifying": { "date": "2026-03-06", "time": "16:00:00Z" }
+    },
+    {
+      "round": "2",
+      "raceName": "Saudi Arabian Grand Prix",
+      "date": "2026-03-21",
+      "time": "17:00:00Z",
+      "Circuit": {
+        "circuitName": "Jeddah Corniche Circuit",
+        "Location": { "locality": "Jeddah", "country": "Saudi Arabia" }
+      },
+      "FirstPractice": { "date": "2026-03-19", "time": "13:30:00Z" },
+      "SecondPractice": { "date": "2026-03-19", "time": "17:00:00Z" },
+      "ThirdPractice": { "date": "2026-03-20", "time": "13:30:00Z" },
+      "Qualifying": { "date": "2026-03-20", "time": "17:00:00Z" }
+    },
+    {
+      "round": "3",
+      "raceName": "Australian Grand Prix",
+      "date": "2026-04-05",
+      "time": "05:00:00Z",
+      "Circuit": {
+        "circuitName": "Albert Park Circuit",
+        "Location": { "locality": "Melbourne", "country": "Australia" }
+      },
+      "FirstPractice": { "date": "2026-04-03", "time": "02:30:00Z" },
+      "SecondPractice": { "date": "2026-04-03", "time": "06:00:00Z" },
+      "ThirdPractice": { "date": "2026-04-04", "time": "02:30:00Z" },
+      "Qualifying": { "date": "2026-04-04", "time": "06:00:00Z" }
+    }
+  ],
+  "driverStandings": [
+    {
+      "position": "1",
+      "points": "85",
+      "wins": "2",
+      "Driver": {
+        "driverId": "max_verstappen",
+        "permanentNumber": "33",
+        "code": "VER",
+        "givenName": "Max",
+        "familyName": "Verstappen",
+        "nationality": "Dutch"
+      },
+      "Constructors": [{ "name": "Red Bull Racing" }]
+    },
+    {
+      "position": "2",
+      "points": "68",
+      "wins": "1",
+      "Driver": {
+        "driverId": "leclerc",
+        "permanentNumber": "16",
+        "code": "LEC",
+        "givenName": "Charles",
+        "familyName": "Leclerc",
+        "nationality": "Monegasque"
+      },
+      "Constructors": [{ "name": "Ferrari" }]
+    },
+    {
+      "position": "3",
+      "points": "55",
+      "wins": "0",
+      "Driver": {
+        "driverId": "norris",
+        "permanentNumber": "4",
+        "code": "NOR",
+        "givenName": "Lando",
+        "familyName": "Norris",
+        "nationality": "British"
+      },
+      "Constructors": [{ "name": "McLaren" }]
+    },
+    {
+      "position": "4",
+      "points": "48",
+      "wins": "0",
+      "Driver": {
+        "driverId": "hamilton",
+        "permanentNumber": "44",
+        "code": "HAM",
+        "givenName": "Lewis",
+        "familyName": "Hamilton",
+        "nationality": "British"
+      },
+      "Constructors": [{ "name": "Ferrari" }]
+    }
+  ],
+  "constructorStandings": [
+    {
+      "position": "1",
+      "points": "123",
+      "Constructor": {
+        "name": "Ferrari",
+        "nationality": "Italian"
+      }
+    },
+    {
+      "position": "2",
+      "points": "115",
+      "Constructor": {
+        "name": "Red Bull Racing",
+        "nationality": "Austrian"
+      }
+    },
+    {
+      "position": "3",
+      "points": "98",
+      "Constructor": {
+        "name": "McLaren",
+        "nationality": "British"
+      }
+    }
+  ]
+}
