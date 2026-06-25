@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#121212">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Widget Settings"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Theme:"
+        android:textSize="16sp"
+        android:textColor="#B3FFFFFF"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/theme_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="32dp">
+
+        <RadioButton
+            android:id="@+id/radio_theme_glass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Glass (Translucent)"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:paddingVertical="12dp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radio_theme_monochrome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monochrome (Solid Dark)"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:paddingVertical="12dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_save_config"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Save &amp; Apply"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF2744"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

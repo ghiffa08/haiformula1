@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_widget_background"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="16dp">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/widget_race_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BHR GP"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_session_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qualifying"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/widget_country_flag"
+            android:layout_width="36dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+    <!-- Results Grid -->
+    <LinearLayout
+        android:id="@+id/widget_results_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Row 1 -->
+        <LinearLayout android:id="@+id/widget_row_1" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/widget_pos_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="01" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"/>
+                <ImageView android:id="@+id/widget_color_1" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:src="@android:color/transparent" android:background="#FF8700" />
+                <TextView android:id="@+id/widget_driver_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PIA" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/widget_pos_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="02" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"/>
+                <ImageView android:id="@+id/widget_color_2" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:src="@android:color/transparent" android:background="#00D2BE" />
+                <TextView android:id="@+id/widget_driver_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RUS" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout android:id="@+id/widget_row_2" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/widget_pos_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="03" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"/>
+                <ImageView android:id="@+id/widget_color_3" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:src="@android:color/transparent" android:background="#DC0000" />
+                <TextView android:id="@+id/widget_driver_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LEC" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/widget_pos_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="04" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"/>
+                <ImageView android:id="@+id/widget_color_4" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:src="@android:color/transparent" android:background="#00D2BE" />
+                <TextView android:id="@+id/widget_driver_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ANT" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout android:id="@+id/widget_row_3" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/widget_pos_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="05" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"/>
+                <ImageView android:id="@+id/widget_color_5" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:src="@android:color/transparent" android:background="#0090FF" />
+                <TextView android:id="@+id/widget_driver_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GAS" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/widget_pos_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="06" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"/>
+                <ImageView android:id="@+id/widget_color_6" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:src="@android:color/transparent" android:background="#FF8700" />
+                <TextView android:id="@+id/widget_driver_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NOR" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Row 4 -->
+        <LinearLayout android:id="@+id/widget_row_4" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/widget_pos_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="07" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"/>
+                <ImageView android:id="@+id/widget_color_7" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:src="@android:color/transparent" android:background="#0600EF" />
+                <TextView android:id="@+id/widget_driver_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VER" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/widget_pos_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="08" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"/>
+                <ImageView android:id="@+id/widget_color_8" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:src="@android:color/transparent" android:background="#0600EF" />
+                <TextView android:id="@+id/widget_driver_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SAI" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Row 5 -->
+        <LinearLayout android:id="@+id/widget_row_5" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/widget_pos_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="09" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"/>
+                <ImageView android:id="@+id/widget_color_9" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:src="@android:color/transparent" android:background="#DC0000" />
+                <TextView android:id="@+id/widget_driver_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HAM" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/widget_pos_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:fontFamily="monospace"/>
+                <ImageView android:id="@+id/widget_color_10" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:src="@android:color/transparent" android:background="#0600EF" />
+                <TextView android:id="@+id/widget_driver_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LAW" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

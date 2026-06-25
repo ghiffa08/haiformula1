@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Disc3, Play, Pause, Volume2, Info, AlertTriangle, Activity, MessageSquare } from 'lucide-react';
 import { fetchWithRetry } from '../services/api';
+import { SkeletonCard } from './ui/Skeleton';
 
 // Reusable Glass component for these widgets
 const Glass = ({ children, style, accent }) => (
@@ -101,7 +102,7 @@ export function RaceStrategy({ sessionKey, results }) {
     loadStints();
   }, [sessionKey, results]);
 
-  if (loading) return <Glass style={{ padding: 24, textAlign: 'center' }}><span style={{ color: 'rgba(255,255,255,0.4)', fontSize: 11, fontWeight: 600 }}>Memuat strategi ban...</span></Glass>;
+  if (loading) return <SkeletonCard height={120} style={{ marginTop: 16 }} />;
   if (!sessionKey || stints.length === 0) return <EmptyStateWizard title="Data Strategi Ban Kosong" icon={Disc3} message="Belum ada data penggunaan ban (stint) yang direkam oleh OpenF1 untuk sesi ini." />;
 
   // Only show top 5 drivers to avoid cluttering UI too much
@@ -208,7 +209,7 @@ export function RaceRecap({ sessionKey, openF1Drivers }) {
     loadTimeline();
   }, [sessionKey]);
 
-  if (loading) return <Glass style={{ padding: 24, textAlign: 'center' }}><span style={{ color: 'rgba(255,255,255,0.4)', fontSize: 11, fontWeight: 600 }}>Memuat timeline sesi...</span></Glass>;
+  if (loading) return <SkeletonCard height={300} style={{ marginTop: 16 }} />;
   if (!sessionKey || timeline.length === 0) return <EmptyStateWizard title="Rekap Belum Tersedia" icon={Activity} message="Belum ada kejadian balap atau pesan radio yang dikumpulkan." />;
 
   return (

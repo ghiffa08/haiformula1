@@ -1,107 +1,324 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_glass_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_widget_background"
-    android:padding="16dp">
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="14dp">
 
-    <!-- Sesi Terdekat Label -->
+    <!-- Left Section: Race Info -->
     <LinearLayout
-        android:id="@+id/session_label_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/app_widget_badge"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp">
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_width="6dp"
-            android:layout_height="6dp"
-            android:src="@android:color/transparent"
-            android:background="#FF2744"
-            android:layout_marginEnd="6dp" />
+            android:id="@+id/widget_glass_country_flag"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
+            android:scaleType="fitCenter" />
 
         <TextView
-            android:id="@+id/widget_session_name"
+            android:id="@+id/widget_glass_race_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SESI TERDEKAT"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Austrian GP"
             android:textColor="#FFFFFF"
-            android:textSize="10sp"
-            android:textStyle="bold"
-            android:textAllCaps="true" />
-    </LinearLayout>
-
-    <!-- Circuit Location -->
-    <TextView
-        android:id="@+id/widget_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@id/session_label_container"
-        android:text="LOKASI"
-        android:textColor="#88FFFFFF"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        android:textAllCaps="true" />
-
-    <!-- Race Name -->
-    <TextView
-        android:id="@+id/widget_race_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/session_label_container"
-        android:layout_marginTop="12dp"
-        android:text="F1 GRAND PRIX"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textAllCaps="true" />
-
-    <!-- Circuit Image -->
-    <ImageView
-        android:id="@+id/widget_circuit_image"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:scaleType="centerInside"
-        android:tint="#FFFFFF"
-        android:layout_marginEnd="16dp" />
-
-    <!-- Static Info Container -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#33000000"
-        android:orientation="horizontal"
-        android:padding="12dp"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:id="@+id/widget_countdown_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="JADWAL:"
-            android:textColor="#66FFFFFF"
-            android:textSize="10sp"
-            android:textStyle="bold"
-            android:layout_marginEnd="12dp" />
-
-        <TextView
-            android:id="@+id/widget_race_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sabtu, 24 Jun - 15:00"
-            android:textColor="#FF2744"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
-            
+
+        <TextView
+            android:id="@+id/widget_glass_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Spielberg"
+            android:textColor="#B3FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/widget_glass_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/app_widget_badge"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="47 HOURS"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
-</RelativeLayout>
+    <!-- Right Section: Schedule -->
+    <LinearLayout
+        android:id="@+id/widget_glass_schedule_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingStart="24dp">
+
+        <!-- Date 1 -->
+        <TextView
+            android:id="@+id/widget_glass_date_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JUN 26, FRI"
+            android:textAllCaps="true"
+            android:textColor="#99FFFFFF"
+            android:textSize="12sp"
+             />
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:id="@+id/widget_glass_row_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="8dp"
+                android:src="@android:color/transparent"
+                android:background="#FF2744" />
+
+            <TextView
+                android:id="@+id/widget_glass_name_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PRACTICE 1"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_glass_time_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:30"
+                android:textColor="#E6FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:id="@+id/widget_glass_row_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="8dp"
+                android:src="@android:color/transparent"
+                android:background="#FF2744" />
+
+            <TextView
+                android:id="@+id/widget_glass_name_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PRACTICE 2"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_glass_time_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22:00"
+                android:textColor="#E6FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Date 2 -->
+        <TextView
+            android:id="@+id/widget_glass_date_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="JUN 27, SAT"
+            android:textAllCaps="true"
+            android:textColor="#99FFFFFF"
+            android:textSize="12sp"
+             />
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:id="@+id/widget_glass_row_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="8dp"
+                android:src="@android:color/transparent"
+                android:background="#FF2744" />
+
+            <TextView
+                android:id="@+id/widget_glass_name_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PRACTICE 3"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_glass_time_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17:30"
+                android:textColor="#E6FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Row 4 -->
+        <LinearLayout
+            android:id="@+id/widget_glass_row_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="8dp"
+                android:src="@android:color/transparent"
+                android:background="#FF2744" />
+
+            <TextView
+                android:id="@+id/widget_glass_name_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="QUALIFYING"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_glass_time_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21:00"
+                android:textColor="#E6FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Date 3 -->
+        <TextView
+            android:id="@+id/widget_glass_date_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="JUN 28, SUN"
+            android:textAllCaps="true"
+            android:textColor="#99FFFFFF"
+            android:textSize="12sp"
+             />
+
+        <!-- Row 5 -->
+        <LinearLayout
+            android:id="@+id/widget_glass_row_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="8dp"
+                android:src="@android:color/transparent"
+                android:background="#FF2744" />
+
+            <TextView
+                android:id="@+id/widget_glass_name_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GRAND PRIX"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_glass_time_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20:00"
+                android:textColor="#E6FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Row 6 (Just in case) -->
+        <LinearLayout
+            android:id="@+id/widget_glass_row_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="8dp"
+                android:src="@android:color/transparent"
+                android:background="#FF2744" />
+
+            <TextView
+                android:id="@+id/widget_glass_name_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SESSION 6"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_glass_time_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#E6FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
